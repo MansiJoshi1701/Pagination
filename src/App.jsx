@@ -30,7 +30,7 @@ function App() {
   const selectPageHandler = (selectedPage) => {
 
     if(selectedPage >= 1 && selectedPage <= products.length / 10){
-      
+
       setPage(selectedPage);
     }
      
@@ -53,7 +53,12 @@ function App() {
       )}
       {products.length > 0 && 
         <div className='pagination'>
-          <span onClick={() => selectPageHandler(page-1)}>⏮️</span>
+          <span
+            onClick={() => selectPageHandler(page-1)}
+            className={page > 1 ? "" : "pagination__disable"}
+          >
+            ⏮️
+          </span>
           {
 
           //Array(int) creates an empty array i.e. [empty,empty,empty,...]
@@ -71,7 +76,12 @@ function App() {
             )
            })
           }
-          <span onClick={() => selectPageHandler(page+1)}>⏭️</span>
+          <span 
+            onClick={() => selectPageHandler(page+1)}
+            className={page < products.length/10 ? "" : "pagination__disable"}
+          >
+            ⏭️
+          </span>
         </div>
       }
     </div>
