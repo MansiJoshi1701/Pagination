@@ -27,3 +27,20 @@
 .products__single > span{
   color: black;
 }
+
+.pagination {
+  padding: 10px;
+  margin: 15px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.pagination > span{
+  padding: 15px 20px;
+  border: 1px solid gray;
+  cursor: pointer;
+}
+
+.pagination__selected{
+  background-color: rgb(220, 220, 220);
+}
