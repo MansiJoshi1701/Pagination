@@ -47,7 +47,7 @@ function App() {
       {products.length > 0 && (
         <div className="products">
           {products.slice(page*10-10 , page*10).map((prod) => {
-          {/* {products.map((prod) => { */}
+          {/* {products.map((prod) => {   -->backend approach*/}
             return(
               <span className="products__single" key={prod.id}>
                 <img src={prod.images} alt={prod.title} />
@@ -68,7 +68,7 @@ function App() {
           {
 
           //Array(int) creates an empty array i.e. [empty,empty,empty,...]
-          //These "empty slots" are not actual undefined values, and some array methods like map might skip them.
+          //These "empty slots" aren't actual undefined values, and some array methods like map might skip them.
           //spread syntax [...] converts those empty slots into undefined values e.g. [undefined, undefined, undefined...],
           //which ensures that methods like map will iterate over them.
 
